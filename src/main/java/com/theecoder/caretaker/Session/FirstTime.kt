@@ -36,6 +36,10 @@ class FirstTime {
         }
         return false
     }
+    fun logoutUser(){
+        editor.putBoolean(IS_LOGIN, true)
+        editor.commit()
+    }
 
     fun isNewuser(): Boolean
     {

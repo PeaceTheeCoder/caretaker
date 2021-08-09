@@ -7,7 +7,6 @@ import android.widget.Button
 import com.theecoder.anonymus.Session.FirstTime
 
 class welcome2 : AppCompatActivity() {
-    lateinit var session: FirstTime
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome2)
@@ -19,9 +18,7 @@ class welcome2 : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.button3).setOnClickListener {
-            session = FirstTime(this)
-            session.createUserSession()
-            var i: Intent = Intent(applicationContext, MainActivity::class.java)
+            var i: Intent = Intent(applicationContext, welcome3::class.java)
             startActivity(i)
             finish()
         }

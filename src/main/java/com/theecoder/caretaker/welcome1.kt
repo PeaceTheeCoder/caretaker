@@ -19,9 +19,7 @@ class welcome1 : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.button3).setOnClickListener {
-            session = FirstTime(this)
-            session.createUserSession()
-            var i: Intent = Intent(applicationContext, MainActivity::class.java)
+            var i: Intent = Intent(applicationContext, welcome3::class.java)
             startActivity(i)
             finish()
         }

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/splash_theme">
-        <activity android:name=".welcome3"></activity>
+        <activity android:name=".signin"></activity>
+        <activity android:name=".welcome3" />
         <activity android:name=".welcome2" />
         <activity android:name=".welcome1" />
         <activity android:name=".MainActivity">

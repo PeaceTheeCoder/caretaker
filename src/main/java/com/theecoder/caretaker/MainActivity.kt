@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         session = FirstTime(this)
 
+
         if(!session.isNewuser()){
             setTheme(R.style.splash_theme)
             setContentView(R.layout.activity_main)
@@ -29,7 +30,6 @@ class MainActivity : AppCompatActivity() {
             questions.add("age group of a patient(Child, teenager, adult or old age)?")
             questions.add("How long since the situation started?")
             questions.add("any additional information?")
-            //temp
 
             next_question(QUESTION_NUMBER)
 
@@ -51,6 +51,12 @@ class MainActivity : AppCompatActivity() {
                 findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.done).visibility = GONE
                 findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.qanda).visibility = VISIBLE
                 next_question(0)
+            }
+            findViewById<ImageView>(R.id.imageView6).setOnClickListener{
+                session.logoutUser()
+                var intent: Intent = Intent(this, welcome1::class.java)
+                startActivity(intent)
+                finish()
             }
 
         }else
